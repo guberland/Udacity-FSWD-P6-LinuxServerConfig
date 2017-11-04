@@ -13,7 +13,8 @@ a secured Linux server and host Item Catalog project on it.
   
   
 ## Setup Walkthrough
-
+### Create Ubuntu Server Instance
+   Follow the instruction page provided by Udacity https://classroom.udacity.com/nanodegrees/nd004/parts/ab002e9a-b26c-43a4-8460-dc4c4b11c379/modules/357367901175462/lessons/3573679011239847/concepts/c4cbd3f2-9adb-45d4-8eaf-b5fc89cc606e
 ### Update currently installed packages
   1. `sudo apt-get update`
   
