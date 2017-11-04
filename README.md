@@ -52,7 +52,7 @@ a secured Linux server and host Item Catalog project on it.
   
   2. `sudo apt-get install python-setuptools libapache2-mod-wsgi`
   
-### Flask 
+### Pythons, Flask, Sqlalchemy
    follow the guide and make change accordingly to suit your environment
 https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
 
