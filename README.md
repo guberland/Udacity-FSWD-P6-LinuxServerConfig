@@ -72,6 +72,7 @@ https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-applicati
   
   5. double check the created DB      `\c catalog` and `\dt` to see tables in catalog database
   
+  
 ## MISC
   - you need to change client_secrets.json and provide full path of your directory
   
@@ -79,9 +80,11 @@ https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-applicati
   
   - change `engine = create_engine('sqlite:///itemCatelog.db')` to `postgresql://catalog:PASSWORD@localhost/catalog`
 
+
 ## Authors
 
 Chao Jiang
+
 
 ## Acknowledgments
 -Udacity and its Forum, stackoverflow.com, digitalocean.com
