@@ -21,10 +21,49 @@ a secured Linux server and host Item Catalog project on it.
   grader ALL=(ALL:ALL) ALL  
   3. on your local machine type ssh-keygen and paste the pub file into grader/.ssh/authorized_keys  
   4. change owner of .ssh and authorized_keys to grader and permission to 700 and 644 respectively
-  5. make sure you test your private key before proceeding by typing 
-  ssh grader@35.162.168.226 -p2200 -i .ssh/PRIVATEKEY
-## Authors
+  5. open ssh config file by sudo nano /etc/ssh/sshd_config and change the following:             
+      -Port 22 to 2200
+      -PermitRootLogin no
+      -PasswordAuthentication no  
+### Uncomplicated Firewall/NTP Configuration  
+   -allow SSH on port 2200    sudo ufw allow 2200/tcp
+   
+   -allow HTTP on port 80     sudo ufw allow 80/tcp
+   
+   -allow NTP on port 123     sudo ufw allow 123/udp
+   
+   -enable firewall           sudo ufw enable
+   
+   - install NTP              sudo apt-get install ntp
+   
+   __make sure you test your private key before proceeding by typing                                                                         ssh grader@35.162.168.226 -p2200 -i .ssh/PRIVATEKEY__
+   
+### Apache2 Configuration
+  1. install Apache sudo apt-get install apache2
+  
+  2. sudo apt-get install python-setuptools libapache2-mod-wsgi
+  
+### Flask 
+   follow the guide and make change accordingly to suit your environment
+https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
 
+### Git
+  1. instasll Git             sudo apt-get install git
+  
+  2. clone the Item Catalog project to the folder created during Flask setup mentioned above from digitalocean
+  
+### PostgreSQL
+  1. install PostgreSQL       sudo apt-get install postgresql 
+  
+  2. change user to postgres  sudo -su postgres and then psql
+  
+  3. create user catalog      sudo -u postgres createuser -P catalog
+  
+  4. create databse catalog   sudo -u postgres createdb -O catalog catalog
+  
+  5. double check             \c catalog and \dt to see tables in catalog database
+  
+  
 Chao Jiang
 
 ## Acknowledgments
