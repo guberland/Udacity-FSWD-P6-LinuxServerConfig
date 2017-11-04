@@ -26,13 +26,13 @@ a secured Linux server and host Item Catalog project on it.
       -`PermitRootLogin no`
       -`PasswordAuthentication no`  
 ### Uncomplicated Firewall/NTP Configuration  
-   -allow SSH on port 2200         `sudo ufw allow 2200/tcp`
+   - allow SSH on port 2200         `sudo ufw allow 2200/tcp`
    
-   -allow HTTP on port 80          `sudo ufw allow 80/tcp`
+   - allow HTTP on port 80          `sudo ufw allow 80/tcp`
    
-   -allow NTP on port 123          `sudo ufw allow 123/udp`
+   - allow NTP on port 123          `sudo ufw allow 123/udp`
    
-   -enable firewall                `sudo ufw enable`
+   - enable firewall                `sudo ufw enable`
    
    - install NTP                   `sudo apt-get install ntp`
    
@@ -61,7 +61,7 @@ https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-applicati
   
   4. create databse catalog        `sudo -u postgres createdb -O catalog catalog`
   
-  5. double check!                 `\c catalog` and `\dt` to see tables in catalog database
+  5. double check the created DB      `\c catalog` and `\dt` to see tables in catalog database
   
   
 Chao Jiang
