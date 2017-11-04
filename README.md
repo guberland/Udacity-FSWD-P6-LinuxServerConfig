@@ -72,14 +72,14 @@ https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-applicati
   
   5. double check the created DB      `\c catalog` and `\dt` to see tables in catalog database
   
-### MISC
+## MISC
   - you need to change client_secrets.json and provide full path of your directory
   
   - you also need to add the server IP on Google developer console under "Authorized JavaScript origins"
   
   - change `engine = create_engine('sqlite:///itemCatelog.db')` to `postgresql://catalog:PASSWORD@localhost/catalog`
 
-### Authors
+## Authors
 
 Chao Jiang
 
